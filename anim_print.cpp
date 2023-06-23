@@ -1,14 +1,17 @@
 #include "raylib.h"
 
+// 이미지 해상도
 const int screenWidth = 800;
 const int screenHeight = 450;
 
+// 이미지 사이즈
 const int spriteWidth = 128;
 const int spriteHeight = 128;
-const int numFrames = 6;
-const int numRows = 1;
 
-int currentFrame = 0;
+const int numFrames = 6; // 최대 프레임
+const int numRows = 1; // 설정된 최대 열 값 (가로값)
+
+int currentFrame = 0; 
 int currentRow = 0;
 float frameTimer = 0.0f;
 float frameSpeed = 0.1f;
@@ -16,6 +19,7 @@ float frameSpeed = 0.1f;
 Rectangle sourceRect;
 Rectangle destRect;
 
+// 애니메이션 실행
 void UpdateAnimation()
 {
     frameTimer += GetFrameTime();
